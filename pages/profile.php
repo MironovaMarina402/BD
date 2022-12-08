@@ -27,7 +27,8 @@
         <p><strong>Должность:</strong> <?php echo $employee['title'] ?></p>
         <p><strong>Устроен до:</strong> <?php echo $employee['to_date'] ?></p>
         <p><strong>Работает до сих пор?</strong> <strong><?php if ($employee['to_date'] == '9999-01-01') {echo "ДА";} ?></strong>
-                                                 <strong><?php if ($employee['to_date'] !== '9999-01-01') {echo "НЕТ";} ?></strong></p> 
+                                                 <strong><?php if ($employee['to_date'] !== '9999-01-01') {echo "НЕТ";} ?></strong>
+        </p> 
     </div>
 
 </body>
