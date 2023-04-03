@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dz5</title>
+</head>
+<body>
+   <script>
+   
+        let user = {
+            name: 'Maria',
+            last_name: 'Zolotareva',
+            age: 30,
+            cat: {
+                name: 'Yappi',
+                age: 3,
+            },
+            'country-birthday': 'rus',
+            get full_name() {
+                return `${this.last_name} ${this.name}`;
+            },
+          
+             salaries: [
+                {
+                  salary: '15670',
+                  from_date: '2009'
+                },
+                {
+                  salary: '16700',
+                  from_date: '2012'
+                },
+                {
+                  salary: '19234',
+                  from_date: '2018'
+                },
+            ],
+            get min() {
+              let s1 = user.salaries;
+              let s = s1.map(function(sal) {
+              return sal.salary;});
+              let min1 = Math.min(...s);
+              return `${min1}`;
+            },
+            get max() {
+              let s1 = user.salaries;
+              let s = s1.map(function(sal) {
+              return sal.salary;});
+              let max1 = Math.max(...s);
+              return `${max1}`;
+            },
+            get avg() {
+              let ssum = 0;
+              let s1 = user.salaries;
+              let ln = user.salaries.length;
+              for (let i = 0; i < ln; i++) {
+              ssum = ssum + s1[i].salary;
+            };
+            let avg1 = ssum/ln;
+            return `${avg1}`;
+            },
+          };
+          
+           console.log('min: ', user.min, 'max: ', user.max, 'avg: ', user.avg);
+</script>
+</body>
+</html>
