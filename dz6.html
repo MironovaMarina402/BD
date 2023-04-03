@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dz6</title>
+</head>
+<body>
+   <script>
+   let user = {
+            name: 'Maria',
+            last_name: 'Zolotareva',
+            age: 30,
+            cat: {
+                name: 'Yappi',
+                age: 3,
+            },
+            'country-birthday': 'rus',
+            get full_name() {
+                return `${this.last_name} ${this.name}`;
+            },
+              salaries: [
+                {
+                  salary: '15670',
+                  from_date: '2009'
+                },
+                {
+                  salary: '16700',
+                  from_date: '2012'
+                },
+                {
+                  salary: '19235',
+                  from_date: '2018'
+                },
+            ],
+          };
+          var num = prompt('Выберите любое число: 30; 105; 14', '');
+          let arr = user.salaries;
+          let arr2 = arr.map(function(sal) {
+              return sal.salary;});
+          let len = arr2.length;
+  
+              sum = 0; //считает сумму цифр всех трех чисел
+              for (let i = 0; i < len; i++) {
+                while (arr2[i]) {
+                sum += arr2[i] % 10;
+                arr2[i] = Math.floor(arr2[i] / 10);
+             }
+              };
+              
+             if (sum == num) {
+             alert('Число совпало!')}
+             else 
+             alert('Число не совпало');
+  
+console.log(sum);
+
+        
+          
+</script>
+</body>
+</html>
